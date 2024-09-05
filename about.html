@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundwave</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
+<style>
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font */
+body {
+    background-image: url(bc.jpg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeInBody 4s ease-out;
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    background: #00000000;
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Hero Section */
+.hero {
+    background: url('.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #ffffff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cta:hover {
+    background: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Products Section */
+.products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    background: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: calc(33% - 2rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">Soundwave</div>
+        <nav>
+            <ul class="bc">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contak.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Soundwave</h1>
+            <a href="produk.html" class="cta">Belanja Sekarang</a>
+        </div>
+    </section>
+
+
+    <section class="hero">
+        <h1>Tentang Kami</h1>
+        <p>tar dulu</p>
+    </section>
+    <script>
+
+// Animasi atau interaksi bisa ditambahkan di sini
+document.addEventListener('DOMContentLoaded', () => {
+    const ctaButtons = document.querySelectorAll('.cta');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = '#ff4500';
+        });
+        
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = '#ff6347';
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>
